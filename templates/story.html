@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Your Madlibs Story{% endblock %}
+
+{% block content %}
+<div class="container has-text-centered is-fluid mx-3 my-2">
+<h3 class="title is-3 has-text-info-dark is-italic">Once upon a time...</h3>
+<div class="card has-text-justified has-background-info-light px-6">
+    <div class="card-content">
+        <p>{{text}}</p>
+    </div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Mad Madlibs{% endblock %}
+
+{% block content %}
+<div class="container is-fluid mx-2 my-2">
+<h3 class="title is-3">Madlibs</h3>
+
+<h5 class="subtitle is-5">Fill out the following to create your story. Note: all verbs should be "-ing" verbs.</h5>
+
+<form action="/story">
+    {% for prompt in prompts %}
+    <div class="field">
+        <label for="{{ prompt }}" class="label is-small">{{ prompt.capitalize() }}</label>
+        <div class="control">
+            <input type="text" class="input is-small" name="{{ prompt }}">
+        </div>
+    </div>
+    {% endfor %}
+    <div class="control">
+        <button class="button is-success">Submit</button>
+    </div>
+</form>
+</div>
+{% endblock %}
